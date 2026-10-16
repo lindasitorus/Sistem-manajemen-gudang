@@ -1,0 +1,5 @@
+Nama: Tiur Maylinda Br sitorus
+Role: Backend Developer
+Job Desk: Bertugas membuat struktur program
+Work Description: Mengelola alur routing pada file index.php 
+ikut serta menyusun sistem manajemen gudang bersama tim.

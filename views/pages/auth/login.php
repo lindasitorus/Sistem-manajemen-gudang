@@ -1,40 +1,47 @@
-<?php 
-// views/pages/auth/login.php
-?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistem Manajemen Gudang</title>
+    <!-- Hubungkan dengan Bootstrap 5 CDN -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-light">
 
-<div class="row justify-content-center align-items-center" style="min-height: 70vh;">
-    <div class="col-md-4">
-        <div class="card shadow border-0">
-            <div class="card-header bg-dark text-white text-center py-3">
-                <h5 class="mb-0 fw-bold">Masuk Sistem Gudang</h5>
-            </div>
-            <div class="card-body p-4">
-
-                <?php if (!empty($error)): ?>
-                    <div class="alert alert-danger py-2 small" role="alert">
-                        <?= htmlspecialchars($error); ?>
+<div class="container">
+    <div class="row justify-content-center align-items-center style="min-height: 100vh;">
+        <div class="col-md-4">
+            <div class="card shadow border-0">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4 font-weight-bold">Login Sistem</h3>
+                    
+                    <!-- Form Login mengarah ke file proses -->
+                    <form action="proses-login.php" method="POST">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username atau Email</label>
+                            <input type="text" name="username" id="username" class="form-control" required placeholder="Masukkan username">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" required placeholder="Masukkan password">
+                        </div>
+                        
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" name="login" class="btn btn-primary">Masuk</button>
+                        </div>
+                    </form>
+                    
+                    <div class="text-center mt-3">
+                        <small class="text-muted">Belum punya akun? <a href="register.php">Daftar disini</a></small>
                     </div>
-                <?php endif; ?>
-
-                <form action="index.php?url=login" method="POST">
-                    <div class="mb-3">
-                        <label class="form-label fw-semibold">Email / Username</label>
-                        <input type="email" name="email" class="form-control" placeholder="nama@email.com" required>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="form-label fw-semibold">Password</label>
-                        <input type="password" name="password" class="form-control" placeholder="Masukkan password" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-dark w-100 py-2 fw-semibold">Masuk Ke Sistem</button>
-                </form>
-
-                <div class="text-center mt-3">
-                    <small class="text-muted">Belum punya akun? <a href="index.php?url=register" class="text-decoration-none text-primary fw-semibold">Daftar di sini</a></small>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
+
+<script src="https://jsdelivr.net"></script>
+</body>
+</html>

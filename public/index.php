@@ -16,13 +16,13 @@ include __DIR__ . '/../views/components/header.php';
 // 2. SISTEM ROUTING UNTUK MEMANGGIL HALAMAN DARI FOLDER PAGES
 switch ($url) {
     case 'products':
-        include __DIR__ . '/../views/pages/products/index.php';
+        include __DIR__ . '/./views/pages/products/index.php';
         break;
-        
-        case 'product':
-            include __DIR__ . '/../views/pages/products/index.php';
-            break;
-            
+
+    case 'register':
+        include __DIR__ . '/./views/register.php';
+        break;
+
         case 'suppliers':
             include __DIR__ . '/../views/pages/suppliers/index.php';
             break;

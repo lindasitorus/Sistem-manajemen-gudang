@@ -19,6 +19,10 @@ switch ($url) {
         include __DIR__ . '/../views/pages/products/index.php';
         break;
         
+        case 'suppliers':
+            include __DIR__ . '/../views/pages/suppliers/index.php';
+            break;
+            
     case 'dashboard':
         include __DIR__ . '/../views/pages/dashboard.php';
         break;
